@@ -1,6 +1,9 @@
 ## Bombardier
 
-- Clone the repo to a remote host.
+- Clone the repo to worker hosts
+```
+ansible-playbook ansible/clone_repo.yml --limit <host>
+```
 
 - Make scripts executable if necessary
 ```
