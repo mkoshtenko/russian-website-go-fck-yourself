@@ -12,9 +12,10 @@ chmod +x stop_bombardier_container.sh
 ```
 
 - Start new container
+
 ansible (remote):
 ```
-ansible-playbook ansible/start_bombardiers.yml --limit <ansible-host>
+ansible-playbook ansible/start_bombardiers.yml --limit <ansible-host> --extra-vars "target=http://fsb.ru"
 ```
 
 manual (local):
@@ -23,6 +24,7 @@ manual (local):
 ```
 
 - Stop running container
+
 ansible (remote):
 ```
 ansible-playbook ansible/stop_bombardiers.yml --limit <ansible-host>
