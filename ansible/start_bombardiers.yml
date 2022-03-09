@@ -1,0 +1,11 @@
+---
+  - name: Start bombardiers
+    hosts: all
+    become: yes
+    tasks:
+      - name: Stop existing bombardier
+        script: ~/russian-website-go-fck-yourself/stop_bombardier_container.sh
+      - name: Start new bombardier
+        script: ~/russian-website-go-fck-yourself/start_bombardier_container.sh "{{ target }}"
+
+
