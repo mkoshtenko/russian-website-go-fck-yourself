@@ -14,5 +14,6 @@
           update_cache: yes
       - name: Clone repo
         git:
-          repo: git@github.com:mkoshtenko/russian-website-go-fck-yourself.git
+          repo: https://github.com/mkoshtenko/russian-website-go-fck-yourself.git
+          dest: ~/russian-website-go-fck-yourself
 
